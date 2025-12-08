@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import Train from '../assets/img/Train.jpg'
 
+import {Link} from  'expo-router'
 
 const Home = () => {
   return (
@@ -16,6 +17,9 @@ const Home = () => {
             <Text>This is a Class</Text>
         </View>
     
+        <Link href='/about' style={styles.link}>About Page</Link>
+        <Link href='/contact' style={styles.link}>Contact Page</Link>
+
     </View>
   )
 }
@@ -44,6 +48,10 @@ const styles = StyleSheet.create({
     title:{
         fontWeight:'bold',
         fontSize:18
+    },
+    link:{
+        marginVertical:10,
+        borderBottomWidth:1
     }
 
 
@@ -55,7 +63,8 @@ const cardStyles= StyleSheet.create({
     card:{
         backgroundColor:'#eeee',
         borderRadius: 5,
-        padding: 20,
-        boxShadow:'4px 4px rgba(0,0,0,0.1)'
+        padding: 10,
+        boxShadow:'4px 4px rgba(0,0,0,0.1)',
+        margin:5,
     }
 })
