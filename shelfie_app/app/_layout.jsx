@@ -1,19 +1,27 @@
 import {Stack} from 'expo-router'
-import { StyleSheet, Text, View } from 'react-native'
+import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native'
+import Colors from "../constants/Colors"
 
 const RootLayout = () => {
-  return (
+  const colorScheme = useColorScheme()
+  const theme = Colors[colorScheme] ?? Colors.light
+  
+  
+    return (  
+      <>
+      <StatusBar value='auto' />
 
         <Stack screenOptions={{
-            headerStyle:{backgroundColor:'#ddd'},
-            headerTintColor:'#333'
-        }}> //Puts content below a navbar style back button. screenOptions sets options globally for all screens
+          headerStyle:{backgroundColor: theme.navBackground},
+          headerTintColor: theme.title
+        }}>
             
             
             <Stack.Screen name='index' options={{title:'Homepage, StackScreen options title'}}/>
             <Stack.Screen name='about' options={{title: 'About Section'}}/>
             <Stack.Screen name='contact' options={{title:'Contact', headerShown:false}}/>
         </Stack>
+  </>
   )
 }
 
