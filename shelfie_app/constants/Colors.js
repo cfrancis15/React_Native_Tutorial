@@ -1,4 +1,4 @@
-const Colors = {
+export const Colors = {
   primary: "#6849a7",
   warning: "#cc475a",
   
@@ -11,7 +11,6 @@ const Colors = {
     iconColorFocused: "#fff",
     uiBackground: "#2f2b3d",
   },
-
   light: {
     text: "#625f72",
     title: "#201e2b",
@@ -21,7 +20,4 @@ const Colors = {
     iconColorFocused: "#201e2b",
     uiBackground: "#d6d5e1",
   },
-  
 }
-
-export default Colors
